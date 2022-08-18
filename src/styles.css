@@ -41,6 +41,10 @@ body {
   background: linear-gradient(125.17deg, #272727 0%, #11101d 100%);
 }
 
+.white-gradient {
+  background: rgba(255, 255, 255, 0.6);
+  filter: blur(750px);
+}
 .blue-gradient {
   background: linear-gradient(180deg, rgba(188, 165, 255, 0) 0%, #214d76 100%);
   filter: blur(123px);
@@ -48,10 +52,6 @@ body {
 .pink-gradient {
   background: linear-gradient(90deg, #f4c4f3 0%, #fc67fa 100%);
   filter: blur(900px);
-}
-.white-gradient {
-  background: rgba(255, 255, 255, 0.6);
-  filter: blur(750px);
 }
 
 /** Boilerplate Built-In Gradient Colors End */
@@ -98,3 +98,52 @@ body {
 }
 
 /** And Design Customize End */
+
+/** Boilerplate Header Style Start */
+
+.header-logo {
+  @apply text-2xl text-textColorWhite font-bold uppercase transition-all duration-100 hover:text-textColorWhiteHover;
+}
+
+.navbar-menu-item {
+  @apply text-textColorWhite font-bold uppercase transition-all duration-100 hover:text-textColorWhiteHover;
+}
+
+.mobile-menu-item {
+  @apply text-textColorWhite uppercase hover:text-textColorWhiteHover;
+}
+
+/* hamburger button */
+.hamburger {
+  @apply cursor-pointer w-[24px] h-[24px] transition-all duration-100 relative;
+}
+
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
+  @apply absolute top-0 left-0 w-[24px] h-[2px] bg-backgroundColorWhite rotate-0 transition-all duration-100;
+}
+
+.hamburger-middle {
+  transform: translateY(7px);
+}
+.hamburger-bottom {
+  transform: translateY(14px);
+}
+
+.open {
+  transform: rotate(90deg);
+  transform: translateY(0px);
+}
+
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translate(6px);
+}
+.open .hamburger-middle {
+  display: none;
+}
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translate(-6px);
+}
+
+/** Boilerplate Header Style Start */
